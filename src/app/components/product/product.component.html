@@ -1,0 +1,24 @@
+<button *ngIf="dataLoaded!=true" class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+    <span class="visually-hidden" role="status">Loading...</span>
+</button>
+<table *ngIf="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ürün adı</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok Adedi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.categoryId}}</td>
+            <td>{{product.unitPrice}}</td>
+            <td>{{product.unitsInStock}}</td>
+        </tr>
+    </tbody>
+</table>
