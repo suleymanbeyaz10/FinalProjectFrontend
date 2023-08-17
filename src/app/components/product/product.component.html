@@ -9,7 +9,7 @@
         placeholder="arama ifadesi giriniz">
 </div>
 <div *ngIf="filterText.length>2" class="alert alert-success">
-    {{filterText}} aradınız
+    <strong>{{filterText}}</strong> aradınız
 </div>
 
 <table *ngIf="dataLoaded==true" class="table">
